@@ -7,11 +7,13 @@ import Contact from "./components/Contact.jsx";
 import History from "./components/History.jsx";
 
 // import browser router, route and routes
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+// import { BrowserRouter, Routes, Route } from "react-router-dom"; use hashrouter for github
 
+import { HashRouter, Routes, Route } from "react-router-dom";
 ReactDOM.createRoot(document.getElementById("root")).render(
   // wrap the app in broserrouter to give the app information about routing and where you are
-  <BrowserRouter>
+  // <BrowserRouter>
+  <HashRouter>
     {/* // configure the paths to display inside Routes*/}
     <Routes>
       <Route path="/" element={<App />} />
@@ -22,5 +24,6 @@ ReactDOM.createRoot(document.getElementById("root")).render(
       </Route>
       <Route path="/contact" element={<Contact />} />
     </Routes>
-  </BrowserRouter>
+    {/* // </BrowserRouter>  use hashRouter for github*/}
+  </HashRouter>
 );
